@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0a2941" name="theme-color"/>
+<meta content="Projetos, competições e notícias da Matemática no IFRO Campus Porto Velho Calama. Conheça o TOM, as olimpíadas e o Desafio Calama." name="description"/>
+<title>Arquivo de notícias | Matemática Campus Calama</title>
+<link href="style.css?v=10" rel="stylesheet"/>
+<link as="image" href="imagens/logo-matematica-calama.webp" rel="preload"/></head>
+<body>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<!-- Cabeçalho sem a antiga barra superior -->
+<header class="site-header" id="inicio">
+<div class="container header-body">
+<a aria-label="Matemática Campus Calama — início" class="brand" href="index.html">
+<img alt="Matemática Campus Calama" height="458" src="imagens/logo-matematica-calama.webp" width="1600"/>
+</a>
+<div class="header-caption">
+<strong>IFRO · Campus Porto Velho Calama</strong>
+<span>Projetos, desafios e conquistas em Matemática</span>
+</div>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu" class="mobile-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<nav aria-label="Navegação principal" class="site-nav" id="main-navigation">
+<div class="container">
+<ul class="nav-list">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item has-dropdown">
+<button aria-controls="menu-projetos" aria-expanded="false" class="nav-link nav-button" data-menu-toggle="" type="button">Projetos <span aria-hidden="true" class="chevron"></span></button>
+<div class="dropdown-panel" id="menu-projetos">
+<div class="menu-group"><strong>Pesquisa</strong><a data-pending-page="Pesquisa em Matemática" href="pesquisa.html">Em breve</a></div>
+<div class="menu-group"><strong>Ensino</strong><a href="tom.html">Treinamento Olímpico em Matemática (TOM)</a><a data-pending-page="Enemat — Matemática para o Enem" href="enemat-matematica-enem.html">Enemat — Matemática para o Enem</a></div>
+<div class="menu-group"><strong>Extensão</strong><a data-pending-page="Mostra de Matemática" href="mostra-matematica.html">Mostra de Matemática (Dia Nacional da Matemática)</a></div>
+</div>
+</li>
+<li class="nav-item has-dropdown">
+<button aria-controls="menu-competicoes" aria-expanded="false" class="nav-link nav-button" data-menu-toggle="" type="button">Competições <span aria-hidden="true" class="chevron"></span></button>
+<div class="dropdown-panel competition-dropdown" id="menu-competicoes">
+<a data-pending-page="Concurso Canguru de Matemática Brasil" href="canguru.html">Concurso Canguru de Matemática Brasil</a>
+<a data-pending-page="Olimpíada de Matemática das Instituições Federais (OMIF)" href="omif.html">Olimpíada de Matemática das Instituições Federais (OMIF)</a>
+<a data-pending-page="Competição Jacob Palis Júnior" href="jacob-palis-junior.html">Competição Jacob Palis Júnior</a>
+<a data-pending-page="Olimpíada Mandacaru de Matemática" href="olimpiada-mandacaru.html">Olimpíada Mandacaru de Matemática</a>
+<a data-pending-page="OBMEP" href="obmep.html">Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP)</a>
+<a data-pending-page="Matemática Sem Fronteiras" href="matematica-sem-fronteiras.html">Matemática Sem Fronteiras</a>
+<a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
+</div>
+</li>
+<li class="nav-item"><a aria-current="page" class="nav-link active" href="noticias.html">Notícias</a></li>
+<li class="nav-item"><a class="nav-link" data-pending-page="Premiados" href="premiados.html">Premiados</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<main id="conteudo">
+<section class="story-hero news-archive-hero" aria-labelledby="news-archive-heading">
+  <div class="container story-container">
+    <p class="breadcrumbs"><a href="index.html">Início</a> / Notícias</p>
+    <p class="eyebrow light">MATEMÁTICA NO IFRO CALAMA</p>
+    <h1 id="news-archive-heading">Notícias e arquivo</h1>
+    <p class="story-lead">Acompanhe projetos, competições, premiações e atividades. As publicações anteriores continuam disponíveis para consulta.</p>
+  </div>
+</section>
+<section class="news-archive-section" aria-label="Consulta ao arquivo de notícias">
+  <div class="container">
+    <div class="news-toolbar">
+      <div class="news-field news-field-search">
+        <label for="news-search">Pesquisar notícias</label>
+        <input id="news-search" type="search" placeholder="Digite um título ou assunto" autocomplete="off"/>
+      </div>
+      <div class="news-field news-field-filter">
+        <label for="news-category">Categoria</label>
+        <select id="news-category">
+          <option value="todas">Todas as categorias</option>
+          <option value="competicao">Competições</option>
+          <option value="projeto">Projetos</option>
+          <option value="extensao">Extensão</option>
+          <option value="premiacao">Premiações</option>
+          <option value="outros">Outras notícias</option>
+        </select>
+      </div>
+    </div>
+    <p class="news-results-count" id="news-results-count" aria-live="polite">Carregando notícias...</p>
+    <div class="news-archive-grid" id="news-archive-grid" aria-label="Resultados da pesquisa"></div>
+    <nav class="news-pagination" id="news-pagination" aria-label="Paginação das notícias"></nav>
+  </div>
+</section>
+</main><footer class="footer">
+<div class="container footer-layout">
+<div class="footer-brand">
+<img alt="Matemática Campus Calama" height="458" src="imagens/logo-matematica-calama.webp" width="1600"/>
+<p>Portal de projetos, competições e conquistas em Matemática do IFRO Campus Porto Velho Calama.</p>
+</div>
+<div class="footer-col">
+<h2>Navegação</h2>
+<a href="index.html">Home</a>
+<a href="index.html#destaques">Destaques</a>
+<a href="noticias.html">Notícias</a>
+<a href="index.html#projetos">Projetos</a>
+<a href="index.html#competicoes">Competições</a>
+<a data-pending-page="Premiados" href="premiados.html">Premiados</a>
+</div>
+<div class="footer-col">
+<h2>Projetos</h2>
+<a data-pending-page="Pesquisa em Matemática" href="pesquisa.html">Pesquisa em Matemática</a>
+<a href="tom.html">Treinamento Olímpico (TOM)</a>
+<a data-pending-page="Enemat — Matemática para o Enem" href="enemat-matematica-enem.html">Enemat — Matemática para o Enem</a>
+<a data-pending-page="Mostra de Matemática" href="mostra-matematica.html">Mostra de Matemática</a>
+</div>
+<div class="footer-col footer-competitions">
+<h2>Competições</h2>
+<a data-pending-page="Concurso Canguru de Matemática Brasil" href="canguru.html">Canguru Matemática Brasil</a>
+<a data-pending-page="Olimpíada de Matemática das Instituições Federais (OMIF)" href="omif.html">OMIF</a>
+<a data-pending-page="Competição Jacob Palis Júnior" href="jacob-palis-junior.html">Jacob Palis Júnior</a>
+<a data-pending-page="Olimpíada Mandacaru de Matemática" href="olimpiada-mandacaru.html">Olimpíada Mandacaru de Matemática</a>
+<a data-pending-page="OBMEP" href="obmep.html">OBMEP</a>
+<a data-pending-page="Matemática Sem Fronteiras" href="matematica-sem-fronteiras.html">Matemática Sem Fronteiras</a>
+<a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© <span id="copyright-year">2026</span> Matemática Campus Calama. Todos os direitos reservados.</span>
+<span>Instituto Federal de Rondônia · Campus Porto Velho Calama</span>
+</div>
+</footer>
+<!-- Para páginas ainda não criadas: mantém os links planejados sem apresentar erro 404. -->
+<dialog aria-labelledby="pending-title" class="pending-dialog" id="pending-dialog">
+<button aria-label="Fechar aviso" class="dialog-close" data-close-dialog="" type="button">×</button>
+<div aria-hidden="true" class="dialog-symbol">∑</div>
+<p class="eyebrow">MATEMÁTICA CAMPUS CALAMA</p>
+<h2 id="pending-title">Página em preparação</h2>
+<p>Estamos preparando a página <strong id="pending-name"></strong> para reunir informações, orientações e links úteis.</p>
+<div class="dialog-actions"><a class="button button-navy" hidden="" href="#" id="pending-alt" rel="noopener noreferrer" target="_blank">Visitar site do evento ↗</a><button class="button button-light" data-close-dialog="" type="button">Voltar à página</button></div>
+</dialog>
+<script src="site-base.js?v=1" defer></script>
+<script src="noticias.js?v=1" defer></script>
+</body>
+</html>

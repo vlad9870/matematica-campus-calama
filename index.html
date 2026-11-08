@@ -7,7 +7,7 @@
 <meta content="#0a2941" name="theme-color"/>
 <meta content="Projetos, competições e notícias da Matemática no IFRO Campus Porto Velho Calama. Conheça o TOM, as olimpíadas e o Desafio Calama." name="description"/>
 <title>Matemática Campus Calama | IFRO</title>
-<link href="style.css?v=9" rel="stylesheet"/>
+<link href="style.css?v=10" rel="stylesheet"/>
 <link as="image" href="imagens/logo-matematica-calama.webp" rel="preload"/></head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -49,6 +49,7 @@
 <a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
 </div>
 </li>
+<li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
 <li class="nav-item"><a class="nav-link" data-pending-page="Premiados" href="premiados.html">Premiados</a></li>
 </ul>
 </div>
@@ -82,7 +83,7 @@
 <p>Imagens, projetos e notícias da Matemática no Campus Porto Velho Calama.</p>
 </header>
 <div class="spotlights-layout"><div class="spotlights-primary">
-<div class="spotlights-mosaic"><article class="mosaic-card mosaic-featured">
+<div class="spotlights-mosaic" id="noticias-destaques"><article class="mosaic-card mosaic-featured">
 <a aria-label="Ler notícia: Desafio de Matemática Calama: prova em 10 de novembro" class="mosaic-card-link" href="noticia.html?slug=desafio-2026">
 <div class="mosaic-visual mosaic-visual-photo mosaic-visual-local">
 <img alt="Identidade visual do Desafio de Matemática Calama 2026" decoding="async" loading="eager" src="imagens/desafio-calama-banner.webp"/>
@@ -131,6 +132,7 @@
 </div>
 </a>
 </article></div>
+<div class="spotlights-more"><a href="noticias.html">Ver todas as notícias <span aria-hidden="true">→</span></a></div>
 </div><aside aria-labelledby="calendar-title" class="calendar">
 <div class="calendar-head"><span class="eyebrow">AGENDA MATEMÁTICA</span><h2 id="calendar-title">Calendário</h2><p>Competições e eventos</p></div>
 <div aria-live="polite" id="calendar-events"></div>
@@ -185,6 +187,7 @@
 <h2>Navegação</h2>
 <a href="index.html">Home</a>
 <a href="#destaques">Destaques</a>
+<a href="noticias.html">Notícias</a>
 <a href="#projetos">Projetos</a>
 <a href="#competicoes">Competições</a>
 <a data-pending-page="Premiados" href="premiados.html">Premiados</a>
@@ -428,5 +431,6 @@
     requestAnimationFrame(frame);
   })();
   </script>
+<script src="noticias.js?v=1" defer></script>
 </body>
 </html>

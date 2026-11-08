@@ -1,0 +1,96 @@
+{
+  "noticias": [
+    {
+      "slug": "desafio-2026",
+      "data": null,
+      "ordem": 4,
+      "tipo": "competicao",
+      "categoria": "COMPETIÇÃO DO CAMPUS",
+      "titulo": "Desafio de Matemática Calama: prova em 10 de novembro",
+      "tituloDestaque": "Desafio de Matemática Calama: prova em 10 de novembro",
+      "resumo": "Confira as orientações para a competição do campus.",
+      "subtitulo": "A competição do campus convida estudantes a exercitar o raciocínio e a criatividade matemática.",
+      "imagem": "imagens/desafio-calama-banner.webp",
+      "legenda": "Identidade visual do Desafio de Matemática Calama 2026.",
+      "largo": true,
+      "paragrafos": [
+        "O Desafio de Matemática Calama integra as iniciativas que incentivam o estudo e a resolução de problemas matemáticos no IFRO Campus Porto Velho Calama.",
+        "A prova da edição de 2026 está marcada para terça-feira, 10 de novembro. Os horários informados para aplicação são: matutino, das 8h às 10h30; vespertino, das 14h30 às 17h; e noturno, das 19h às 21h30.",
+        "Para consultar informações específicas e comunicados da organização, utilize o site do evento."
+      ],
+      "link": {
+        "url": "https://desafiomatematicacalama.netlify.app/",
+        "texto": "Site do Desafio Calama ↗"
+      }
+    },
+    {
+      "slug": "tom",
+      "data": null,
+      "ordem": 3,
+      "tipo": "projeto",
+      "categoria": "PROJETO DE ENSINO",
+      "titulo": "TOM: Treinamento Olímpico em Matemática",
+      "tituloDestaque": "TOM: preparação para as olimpíadas de Matemática",
+      "resumo": "Aulas e resolução de problemas além da sala de aula.",
+      "subtitulo": "Treinamento extracurricular de Matemática com ênfase na resolução de problemas.",
+      "imagem": "imagens/tom.jpeg",
+      "legenda": "Registro de atividade com estudantes e professores no campus.",
+      "largo": false,
+      "paragrafos": [
+        "O Treinamento Olímpico em Matemática (TOM) é um projeto de ensino do IFRO Campus Porto Velho Calama voltado ao aprofundamento de conhecimentos matemáticos e à preparação dos estudantes para olimpíadas e competições.",
+        "As atividades exploram problemas de Álgebra, Geometria, Combinatória e Teoria dos Números. As aulas incentivam investigação, criatividade e participação ativa dos estudantes.",
+        "A página específica do TOM reúne informações sobre a metodologia e as orientações de participação."
+      ],
+      "link": {
+        "url": "tom.html",
+        "texto": "Conhecer o TOM ↗"
+      }
+    },
+    {
+      "slug": "msf",
+      "data": null,
+      "ordem": 2,
+      "tipo": "competicao",
+      "categoria": "COMPETIÇÃO POR EQUIPES",
+      "titulo": "Matemática Sem Fronteiras: aprender em equipe",
+      "tituloDestaque": "Matemática Sem Fronteiras: aprender em equipe",
+      "resumo": "Conheça uma competição que valoriza o trabalho coletivo.",
+      "subtitulo": "Uma experiência de resolução coletiva de problemas matemáticos.",
+      "imagem": "imagens/msf.jpeg",
+      "legenda": "Registro de estudantes e professores em atividade acadêmica.",
+      "largo": false,
+      "paragrafos": [
+        "A Matemática Sem Fronteiras é uma competição baseada na solução de problemas por equipes. Os participantes precisam dialogar, desenvolver estratégias e construir respostas coletivamente.",
+        "No Campus Porto Velho Calama, a participação em competições como essa complementa o trabalho desenvolvido em projetos de ensino e estimula o interesse pela Matemática.",
+        "As orientações de participação e as datas de cada edição devem ser conferidas nos comunicados oficiais da competição."
+      ],
+      "link": {
+        "url": "index.html#competicoes",
+        "texto": "Ver competições ↗"
+      }
+    },
+    {
+      "slug": "mostra",
+      "data": null,
+      "ordem": 1,
+      "tipo": "extensao",
+      "categoria": "EXTENSÃO",
+      "titulo": "Mostra de Matemática: aprender com jogos e experiências",
+      "tituloDestaque": "Mostra de Matemática: aprender com jogos e experiências",
+      "resumo": "Jogos e atividades aproximam a Matemática do público.",
+      "subtitulo": "Uma oportunidade para aproximar a Matemática de diferentes públicos.",
+      "imagem": "imagens/mostra_matematica.jpeg",
+      "legenda": "Registro de professores com jogos e materiais matemáticos no campus.",
+      "largo": false,
+      "paragrafos": [
+        "A Mostra de Matemática é uma iniciativa de extensão relacionada ao Dia Nacional da Matemática e à valorização do conhecimento matemático.",
+        "Jogos, materiais manipuláveis e outras atividades ajudam a apresentar conceitos de forma participativa, aproximando estudantes, professores e visitantes.",
+        "Novas informações e registros poderão ser divulgados nesta página conforme a organização de cada edição."
+      ],
+      "link": {
+        "url": "index.html#projetos",
+        "texto": "Ver projetos ↗"
+      }
+    }
+  ]
+}

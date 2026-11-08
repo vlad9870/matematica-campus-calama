@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"/>
@@ -7,8 +6,8 @@
 <meta content="#0a2941" name="theme-color"/>
 <meta content="Projetos, competições e notícias da Matemática no IFRO Campus Porto Velho Calama. Conheça o TOM, as olimpíadas e o Desafio Calama." name="description"/>
 <title>Notícia | Matemática Campus Calama</title>
-<link href="style.css" rel="stylesheet"/>
-<link as_="image" href="imagens/logo-matematica-calama.webp" rel="preload"/></head>
+<link href="style.css?v=10" rel="stylesheet"/>
+<link as="image" href="imagens/logo-matematica-calama.webp" rel="preload"/></head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <!-- Cabeçalho sem a antiga barra superior -->
@@ -28,7 +27,7 @@
 <nav aria-label="Navegação principal" class="site-nav" id="main-navigation">
 <div class="container">
 <ul class="nav-list">
-<li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
 <li class="nav-item has-dropdown">
 <button aria-controls="menu-projetos" aria-expanded="false" class="nav-link nav-button" data-menu-toggle="" type="button">Projetos <span aria-hidden="true" class="chevron"></span></button>
 <div class="dropdown-panel" id="menu-projetos">
@@ -49,31 +48,29 @@
 <a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
 </div>
 </li>
+<li class="nav-item"><a class="nav-link" href="noticias.html">Notícias</a></li>
 <li class="nav-item"><a class="nav-link" data-pending-page="Premiados" href="premiados.html">Premiados</a></li>
 </ul>
 </div>
 </nav>
 </header>
-
 <main id="conteudo">
 <section class="story-hero"><div class="container story-container">
-<p class="breadcrumbs"><a href="index.html#destaques">Início</a> / Notícias</p>
+<p class="breadcrumbs"><a href="index.html">Início</a> / <a href="noticias.html">Notícias</a> / Publicação</p>
 <p class="eyebrow light" id="story-category">MATEMÁTICA NO IFRO CALAMA</p>
 <h1 id="story-title">Notícias</h1>
 <p class="story-lead" id="story-lead">Atividades e notícias do Campus Calama.</p>
+<time class="story-date" id="story-date" hidden></time>
 </div></section>
 <section class="story-section"><div class="container story-container">
-
-  <div class="story-image-frame">
-    <img alt="" class="story-image" decoding="async"
-         id="story-image" loading="eager"/>
+<div class="story-image-frame" id="story-image-frame">
+<img alt="" class="story-image" decoding="async" id="story-image" loading="eager"/>
 </div>
-
 <p class="story-caption" id="story-caption"></p>
 <article class="story-article" id="story-content"></article>
 <nav aria-label="Links relacionados" class="story-actions">
-<a href="index.html#destaques">← Voltar aos destaques</a>
-<a href="index.html#projetos">Conhecer projetos ↗</a>
+<a href="noticias.html">← Todas as notícias</a>
+<a href="index.html#destaques">Ver destaques ↗</a>
 </nav>
 </div></section>
 </main><footer class="footer">
@@ -85,9 +82,10 @@
 <div class="footer-col">
 <h2>Navegação</h2>
 <a href="index.html">Home</a>
-<a href="#destaques">Destaques</a>
-<a href="#projetos">Projetos</a>
-<a href="#competicoes">Competições</a>
+<a href="index.html#destaques">Destaques</a>
+<a href="noticias.html">Notícias</a>
+<a href="index.html#projetos">Projetos</a>
+<a href="index.html#competicoes">Competições</a>
 <a data-pending-page="Premiados" href="premiados.html">Premiados</a>
 </div>
 <div class="footer-col">
@@ -122,96 +120,7 @@
 <p>Estamos preparando a página <strong id="pending-name"></strong> para reunir informações, orientações e links úteis.</p>
 <div class="dialog-actions"><a class="button button-navy" hidden="" href="#" id="pending-alt" rel="noopener noreferrer" target="_blank">Visitar site do evento ↗</a><button class="button button-light" data-close-dialog="" type="button">Voltar à página</button></div>
 </dialog>
-
-<script>(() => {
-  const artigos = {
-    'desafio-2026': {
-      categoria:'COMPETIÇÃO DO CAMPUS',
-      titulo:'Desafio de Matemática Calama: prova em 10 de novembro',
-      subtitulo:'A competição do campus convida estudantes a exercitar o raciocínio e a criatividade matemática.',
-      imagem:'imagens/desafio-calama-banner.webp',
-      legenda:'Identidade visual do Desafio de Matemática Calama 2026.',
-      largo:true,
-      paragrafos:[
-        'O Desafio de Matemática Calama integra as iniciativas que incentivam o estudo e a resolução de problemas matemáticos no IFRO Campus Porto Velho Calama.',
-        'A prova da edição de 2026 está marcada para terça-feira, 10 de novembro. Os horários informados para aplicação são: matutino, das 8h às 10h30; vespertino, das 14h30 às 17h; e noturno, das 19h às 21h30.',
-        'Para consultar informações específicas e comunicados da organização, utilize o site do evento.'
-      ],
-      link:{url:'https://desafiomatematicacalama.netlify.app/',texto:'Site do Desafio Calama ↗'}
-    },
-    'tom': {
-      categoria:'PROJETO DE ENSINO',
-      titulo:'TOM: Treinamento Olímpico em Matemática',
-      subtitulo:'Treinamento extracurricular de Matemática com ênfase na resolução de problemas.',
-      imagem:'imagens/tom.jpeg',
-      legenda:'Registro de atividade com estudantes e professores no campus.',
-      paragrafos:[
-        'O Treinamento Olímpico em Matemática (TOM) é um projeto de ensino do IFRO Campus Porto Velho Calama voltado ao aprofundamento de conhecimentos matemáticos e à preparação dos estudantes para olimpíadas e competições.',
-        'As atividades exploram problemas de Álgebra, Geometria, Combinatória e Teoria dos Números. As aulas incentivam investigação, criatividade e participação ativa dos estudantes.',
-        'A página específica do TOM reúne informações sobre a metodologia e as orientações de participação.'
-      ],
-      link:{url:'tom.html',texto:'Conhecer o TOM ↗'}
-    },
-    'msf': {
-      categoria:'COMPETIÇÃO POR EQUIPES',
-      titulo:'Matemática Sem Fronteiras: aprender em equipe',
-      subtitulo:'Uma experiência de resolução coletiva de problemas matemáticos.',
-      imagem:'imagens/msf.jpeg',
-      legenda:'Registro de estudantes e professores em atividade acadêmica.',
-      paragrafos:[
-        'A Matemática Sem Fronteiras é uma competição baseada na solução de problemas por equipes. Os participantes precisam dialogar, desenvolver estratégias e construir respostas coletivamente.',
-        'No Campus Porto Velho Calama, a participação em competições como essa complementa o trabalho desenvolvido em projetos de ensino e estimula o interesse pela Matemática.',
-        'As orientações de participação e as datas de cada edição devem ser conferidas nos comunicados oficiais da competição.'
-      ],
-      link:{url:'index.html#competicoes',texto:'Ver competições ↗'}
-    },
-    'mostra': {
-      categoria:'EXTENSÃO',
-      titulo:'Mostra de Matemática: aprender com jogos e experiências',
-      subtitulo:'Uma oportunidade para aproximar a Matemática de diferentes públicos.',
-      imagem:'imagens/mostra_matematica.jpeg',
-      legenda:'Registro de professores com jogos e materiais matemáticos no campus.',
-      paragrafos:[
-        'A Mostra de Matemática é uma iniciativa de extensão relacionada ao Dia Nacional da Matemática e à valorização do conhecimento matemático.',
-        'Jogos, materiais manipuláveis e outras atividades ajudam a apresentar conceitos de forma participativa, aproximando estudantes, professores e visitantes.',
-        'Novas informações e registros poderão ser divulgados nesta página conforme a organização de cada edição.'
-      ],
-      link:{url:'index.html#projetos',texto:'Ver projetos ↗'}
-    }
-  };
-
-
-  const parametros = new URLSearchParams(window.location.search);
-  const chave = parametros.get('slug') || 'desafio-2026';
-  const art = artigos[chave] || artigos['desafio-2026'];
-  document.title = `${art.titulo} | Matemática Campus Calama`;
-  document.getElementById('story-category').textContent=art.categoria;
-  document.getElementById('story-title').textContent=art.titulo;
-  document.getElementById('story-lead').textContent=art.subtitulo;
-  const foto=document.getElementById('story-image');
-  foto.src=art.imagem; foto.alt=art.legenda;
-  if(art.largo) foto.classList.add('story-image-wide');
-  document.getElementById('story-caption').textContent=art.legenda;
-  const conteudo=document.getElementById('story-content');
-  art.paragrafos.forEach(par => { const p=document.createElement('p');p.textContent=par;conteudo.appendChild(p); });
-  const rel=document.createElement('p');
-  const link=document.createElement('a');link.href=art.link.url;link.textContent=art.link.texto;link.style.cssText='color:#087a75;font-weight:750;text-decoration:underline;';
-  if(link.href.startsWith('http')){link.target='_blank';link.rel='noopener noreferrer';}
-  rel.appendChild(link);conteudo.appendChild(rel);
-
-  const menuButton=document.querySelector('.mobile-toggle');
-  const siteNav=document.querySelector('.site-nav');
-  const submenuButtons=[...document.querySelectorAll('[data-menu-toggle]')];
-  function closeSubmenus(except=null){submenuButtons.forEach(button=>{if(button!==except){button.setAttribute('aria-expanded','false');button.closest('.has-dropdown').classList.remove('is-open');}});}
-  menuButton?.addEventListener('click',()=>{const open=menuButton.getAttribute('aria-expanded')!=='true';menuButton.setAttribute('aria-expanded',String(open));menuButton.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');siteNav.classList.toggle('nav-open',open);if(!open)closeSubmenus();});
-  submenuButtons.forEach(button=>button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')==='true';closeSubmenus(button);button.setAttribute('aria-expanded',String(!open));button.closest('.has-dropdown').classList.toggle('is-open',!open);}));
-  document.addEventListener('click',e=>{if(!e.target.closest('.site-nav'))closeSubmenus();});
-  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeSubmenus();if(siteNav.classList.contains('nav-open'))menuButton.click();}});
-  siteNav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{closeSubmenus();if(siteNav.classList.contains('nav-open'))menuButton.click();}));
-  const dialog=document.getElementById('pending-dialog');const dialogName=document.getElementById('pending-name');const altLink=document.getElementById('pending-alt');
-  document.querySelectorAll('[data-pending-page]').forEach(link=>link.addEventListener('click',e=>{e.preventDefault();dialogName.textContent=link.dataset.pendingPage;const alt=link.dataset.altUrl;altLink.hidden=!alt;if(alt)altLink.href=alt;if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');}));
-  document.querySelectorAll('[data-close-dialog]').forEach(b=>b.addEventListener('click',()=>dialog.close()));
-  dialog?.addEventListener('click',e=>{if(e.target===dialog)dialog.close();});
-  document.getElementById('copyright-year').textContent=new Date().getFullYear();
-})();</script></body>
+<script src="site-base.js?v=1" defer></script>
+<script src="noticias.js?v=1" defer></script>
+</body>
 </html>
