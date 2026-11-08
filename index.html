@@ -1,293 +1,432 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b3457">
-  <meta name="description" content="Matemática Campus Calama: competições, projetos, calendário e premiados do IFRO Campus Porto Velho Calama.">
-  <title>Matemática Campus Calama | IFRO</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="#0a2941" name="theme-color"/>
+<meta content="Projetos, competições e notícias da Matemática no IFRO Campus Porto Velho Calama. Conheça o TOM, as olimpíadas e o Desafio Calama." name="description"/>
+<title>Matemática Campus Calama | IFRO</title>
+<link href="style.css?v=9" rel="stylesheet"/>
+<link as="image" href="imagens/logo-matematica-calama.webp" rel="preload"/></head>
 <body>
-  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
-  <div class="top-strip">
-    <div class="container top-strip-inner">
-      <span>IFRO <span aria-hidden="true">·</span> Campus Porto Velho Calama</span>
-      <span>Matemática, projetos e competições</span>
-    </div>
+<a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+<!-- Cabeçalho sem a antiga barra superior -->
+<header class="site-header" id="inicio">
+<div class="container header-body">
+<a aria-label="Matemática Campus Calama — início" class="brand" href="index.html">
+<img alt="Matemática Campus Calama" height="458" src="imagens/logo-matematica-calama.webp" width="1600"/>
+</a>
+<div class="header-caption">
+<strong>IFRO · Campus Porto Velho Calama</strong>
+<span>Projetos, desafios e conquistas em Matemática</span>
+</div>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Abrir menu" class="mobile-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+</div>
+<nav aria-label="Navegação principal" class="site-nav" id="main-navigation">
+<div class="container">
+<ul class="nav-list">
+<li class="nav-item"><a aria-current="page" class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item has-dropdown">
+<button aria-controls="menu-projetos" aria-expanded="false" class="nav-link nav-button" data-menu-toggle="" type="button">Projetos <span aria-hidden="true" class="chevron"></span></button>
+<div class="dropdown-panel" id="menu-projetos">
+<div class="menu-group"><strong>Pesquisa</strong><a data-pending-page="Pesquisa em Matemática" href="pesquisa.html">Em breve</a></div>
+<div class="menu-group"><strong>Ensino</strong><a href="tom.html">Treinamento Olímpico em Matemática (TOM)</a><a data-pending-page="Enemat — Matemática para o Enem" href="enemat-matematica-enem.html">Enemat — Matemática para o Enem</a></div>
+<div class="menu-group"><strong>Extensão</strong><a data-pending-page="Mostra de Matemática" href="mostra-matematica.html">Mostra de Matemática (Dia Nacional da Matemática)</a></div>
+</div>
+</li>
+<li class="nav-item has-dropdown">
+<button aria-controls="menu-competicoes" aria-expanded="false" class="nav-link nav-button" data-menu-toggle="" type="button">Competições <span aria-hidden="true" class="chevron"></span></button>
+<div class="dropdown-panel competition-dropdown" id="menu-competicoes">
+<a data-pending-page="Concurso Canguru de Matemática Brasil" href="canguru.html">Concurso Canguru de Matemática Brasil</a>
+<a data-pending-page="Olimpíada de Matemática das Instituições Federais (OMIF)" href="omif.html">Olimpíada de Matemática das Instituições Federais (OMIF)</a>
+<a data-pending-page="Competição Jacob Palis Júnior" href="jacob-palis-junior.html">Competição Jacob Palis Júnior</a>
+<a data-pending-page="Olimpíada Mandacaru de Matemática" href="olimpiada-mandacaru.html">Olimpíada Mandacaru de Matemática</a>
+<a data-pending-page="OBMEP" href="obmep.html">Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP)</a>
+<a data-pending-page="Matemática Sem Fronteiras" href="matematica-sem-fronteiras.html">Matemática Sem Fronteiras</a>
+<a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
+</div>
+</li>
+<li class="nav-item"><a class="nav-link" data-pending-page="Premiados" href="premiados.html">Premiados</a></li>
+</ul>
+</div>
+</nav>
+</header>
+<main id="conteudo">
+<!-- Banner institucional: cicloide vetorial animada; texto e fundo estáticos. -->
+<section class="banner-matematica" aria-labelledby="hero-title">
+  <div class="banner-conteudo">
+    <span class="detalhe-superior" aria-hidden="true"></span>
+    <h1 class="banner-texto" id="hero-title">Um espaço para acompanhar <span class="destaque">projetos, competições e conquistas matemáticas</span> no Campus Porto Velho Calama.</h1>
   </div>
+  <div class="faixa-cicloide">
+    <svg id="svg-cicloide" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" preserveAspectRatio="none">
+      <line id="cicloide-base"></line>
+      <path id="cicloide-guia"></path>
+      <path id="cicloide-rastro"></path>
+      <circle id="cicloide-roda"></circle>
+      <line id="cicloide-raio"></line>
+      <circle id="cicloide-eixo"></circle>
+      <circle id="cicloide-ponto"></circle>
+    </svg>
+    <button class="cicloide-controle" type="button" aria-label="Pausar animação da cicloide" aria-pressed="false" title="Pausar animação"><span aria-hidden="true">Ⅱ</span></button>
+  </div>
+</section>
+<!-- Destaques e calendário -->
+<section aria-labelledby="destaques-title" class="spotlights section-space" id="destaques">
+<div class="container"><header class="section-title">
+<p class="eyebrow">EM EVIDÊNCIA</p>
+<h2 id="destaques-title">Destaques e notícias</h2>
+<p>Imagens, projetos e notícias da Matemática no Campus Porto Velho Calama.</p>
+</header>
+<div class="spotlights-layout"><div class="spotlights-primary">
+<div class="spotlights-mosaic"><article class="mosaic-card mosaic-featured">
+<a aria-label="Ler notícia: Desafio de Matemática Calama: prova em 10 de novembro" class="mosaic-card-link" href="noticia.html?slug=desafio-2026">
+<div class="mosaic-visual mosaic-visual-photo mosaic-visual-local">
+<img alt="Identidade visual do Desafio de Matemática Calama 2026" decoding="async" loading="eager" src="imagens/desafio-calama-banner.webp"/>
+</div>
+<div class="mosaic-body">
+<span class="label">COMPETIÇÃO DO CAMPUS</span>
+<h3>Desafio de Matemática Calama: prova em 10 de novembro</h3>
+<p>Confira as orientações para a competição do campus.</p>
+<span class="mosaic-link">Ler notícia <span aria-hidden="true">↗</span></span>
+</div>
+</a>
+</article><article class="mosaic-card">
+<a aria-label="Ler notícia: TOM: preparação para as olimpíadas de Matemática" class="mosaic-card-link" href="noticia.html?slug=tom">
+<div class="mosaic-visual mosaic-visual-photo mosaic-visual-local">
+<img alt="Estudantes e professores participantes de atividades de Matemática no campus" decoding="async" loading="lazy" src="imagens/tom.jpeg"/>
+</div>
+<div class="mosaic-body">
+<span class="label">PROJETO DE ENSINO</span>
+<h3>TOM: preparação para as olimpíadas de Matemática</h3>
+<p>Aulas e resolução de problemas além da sala de aula.</p>
+<span class="mosaic-link">Ler notícia <span aria-hidden="true">↗</span></span>
+</div>
+</a>
+</article><article class="mosaic-card">
+<a aria-label="Ler notícia: Matemática Sem Fronteiras: aprender em equipe" class="mosaic-card-link" href="noticia.html?slug=msf">
+<div class="mosaic-visual mosaic-visual-photo mosaic-visual-local">
+<img alt="Estudantes e professores reunidos em atividade acadêmica" decoding="async" loading="lazy" src="imagens/msf.jpeg"/>
+</div>
+<div class="mosaic-body">
+<span class="label">COMPETIÇÃO POR EQUIPES</span>
+<h3>Matemática Sem Fronteiras: aprender em equipe</h3>
+<p>Conheça uma competição que valoriza o trabalho coletivo.</p>
+<span class="mosaic-link">Ler notícia <span aria-hidden="true">↗</span></span>
+</div>
+</a>
+</article><article class="mosaic-card">
+<a aria-label="Ler notícia: Mostra de Matemática: aprender com jogos e experiências" class="mosaic-card-link" href="noticia.html?slug=mostra">
+<div class="mosaic-visual mosaic-visual-photo mosaic-visual-local">
+<img alt="Professores apresentam jogos e materiais na Mostra de Matemática" decoding="async" loading="lazy" src="imagens/mostra_matematica.jpeg"/>
+</div>
+<div class="mosaic-body">
+<span class="label">EXTENSÃO</span>
+<h3>Mostra de Matemática: aprender com jogos e experiências</h3>
+<p>Jogos e atividades aproximam a Matemática do público.</p>
+<span class="mosaic-link">Ler notícia <span aria-hidden="true">↗</span></span>
+</div>
+</a>
+</article></div>
+</div><aside aria-labelledby="calendar-title" class="calendar">
+<div class="calendar-head"><span class="eyebrow">AGENDA MATEMÁTICA</span><h2 id="calendar-title">Calendário</h2><p>Competições e eventos</p></div>
+<div aria-live="polite" id="calendar-events"></div>
+</aside></div></div>
+</section>
+<!-- Projetos com páginas individuais -->
+<section aria-labelledby="projetos-title" class="projects section-space" id="projetos">
+<div class="container">
+<header class="section-title section-title-narrow"><p class="eyebrow">ENSINO, PESQUISA E EXTENSÃO</p><h2 id="projetos-title">Projetos</h2><p>Iniciativas que estimulam a aprendizagem, a investigação e a participação dos estudantes.</p></header>
+<div class="projects-grid">
+<article class="project-card"><div class="project-media project-media-photo"><img alt="Professores reunidos em atividade acadêmica no campus" decoding="async" loading="lazy" src="imagens/professores.jpeg"/></div><div class="project-card-content"><span class="label">PESQUISA</span><h3>Pesquisa em Matemática</h3><p>Um espaço reservado para a divulgação de estudos e projetos de pesquisa desenvolvidos no campus.</p><a class="text-arrow" data-pending-page="Pesquisa em Matemática" href="pesquisa.html">Página do projeto <span aria-hidden="true">↗</span></a></div></article>
+<article class="project-card project-card-featured"><div class="project-media project-media-photo"><img alt="Equipe e estudantes ligados às atividades de Matemática" decoding="async" loading="lazy" src="imagens/tom.jpeg"/></div><div class="project-card-content"><span class="label">ENSINO</span><h3>Treinamento Olímpico em Matemática (TOM)</h3><p>Aulas extracurriculares, resolução de problemas e aprofundamento matemático para competições.</p><a class="text-arrow" href="tom.html">Conhecer o TOM <span aria-hidden="true">↗</span></a></div></article>
+<article class="project-card"><div class="project-media project-media-abstract"><span aria-hidden="true">f(x)</span></div><div class="project-card-content"><span class="label">ENSINO</span><h3>Enemat — Matemática para o Enem</h3><p>Iniciativa voltada à preparação e ao fortalecimento dos conhecimentos matemáticos para o Enem.</p><a class="text-arrow" data-pending-page="Enemat — Matemática para o Enem" href="enemat-matematica-enem.html">Página do projeto <span aria-hidden="true">↗</span></a></div></article>
+<article class="project-card"><div class="project-media project-media-photo"><img alt="Professores com jogos e materiais matemáticos em uma mostra" decoding="async" loading="lazy" src="imagens/mostra_matematica.jpeg"/></div><div class="project-card-content"><span class="label">EXTENSÃO</span><h3>Mostra de Matemática</h3><p>Atividade de divulgação e valorização da Matemática em referência ao Dia Nacional da Matemática.</p><a class="text-arrow" data-pending-page="Mostra de Matemática" href="mostra-matematica.html">Página do projeto <span aria-hidden="true">↗</span></a></div></article>
+</div>
+</div>
+</section>
+<!-- Competições: sem filtros, busca ou barra secundária -->
+<section aria-labelledby="competicoes-title" class="competitions section-space" id="competicoes">
+<div class="container">
+<header class="section-title section-title-light"><p class="eyebrow light">DESAFIOS E OPORTUNIDADES</p><h2 id="competicoes-title">Competições matemáticas</h2><p>Conheça as competições acompanhadas pelo campus. Cada uma terá sua própria página de informações.</p></header>
+<div class="competitions-grid">
+<article class="competition-card"><span class="competition-mark">01 <i>CM</i></span><div class="competition-logo competition-logo--canguru"><img alt="Logomarca do Concurso Canguru de Matemática Brasil" decoding="async" loading="lazy" src="imagens/canguru-matematica.webp"/></div><h3>Concurso Canguru de Matemática Brasil</h3><p>Desafios de lógica e raciocínio que incentivam uma relação criativa com a Matemática.</p><a data-pending-page="Concurso Canguru de Matemática Brasil" href="canguru.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">02 <i>OMIF</i></span><div class="competition-logo competition-logo--omif"><img alt="Logomarca da Olimpíada de Matemática das Instituições Federais" decoding="async" loading="lazy" src="imagens/omif.webp"/></div><h3>Olimpíada de Matemática das Instituições Federais (OMIF)</h3><p>Competição que mobiliza estudantes das instituições da Rede Federal de Educação.</p><a data-pending-page="Olimpíada de Matemática das Instituições Federais (OMIF)" href="omif.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">03 <i>JPJ</i></span><div class="competition-logo competition-logo--jacob"><img alt="Logomarca da Competição Jacob Palis Júnior de Matemática" decoding="async" loading="lazy" src="imagens/jacob-palis-junior.webp"/></div><h3>Competição Jacob Palis Júnior</h3><p>Problemas que estimulam o pensamento matemático e a resolução de desafios.</p><a data-pending-page="Competição Jacob Palis Júnior" href="jacob-palis-junior.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">04 <i>OMM</i></span><div class="competition-logo competition-logo--mandacaru"><img alt="Logomarca da Olimpíada Mandacaru de Matemática" decoding="async" loading="lazy" src="imagens/olimpiada-mandacaru.webp"/></div><h3>Olimpíada Mandacaru de Matemática</h3><p>Desafios que incentivam a criatividade, o raciocínio lógico e a resolução de problemas matemáticos.</p><a data-pending-page="Olimpíada Mandacaru de Matemática" href="olimpiada-mandacaru.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">05 <i>OBMEP</i></span><div class="competition-logo competition-logo--obmep"><img alt="Logomarca da Olimpíada Brasileira de Matemática das Escolas Públicas" decoding="async" loading="lazy" src="imagens/obmep.webp"/></div><h3>Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP)</h3><p>Uma das principais olimpíadas escolares de Matemática do país, com diferentes etapas.</p><a data-pending-page="OBMEP" href="obmep.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">06 <i>MSF</i></span><div class="competition-logo competition-logo--msf"><img alt="Logomarca da Olimpíada Internacional Matemática Sem Fronteiras" decoding="async" loading="lazy" src="imagens/msf.webp"/></div><h3>Matemática Sem Fronteiras</h3><p>Competição realizada por equipes, com ênfase na colaboração e na solução de problemas.</p><a data-pending-page="Matemática Sem Fronteiras" href="matematica-sem-fronteiras.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+<article class="competition-card"><span class="competition-mark">07 <i>DC</i></span><div class="competition-logo competition-logo--desafio"><img alt="Identidade visual do Desafio de Matemática Calama 2026" decoding="async" loading="lazy" src="imagens/desafio-calama-banner.webp"/></div><h3>Desafio de Matemática Calama</h3><p>Competição do próprio campus para estimular o estudo e a participação em Matemática.</p><a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Conhecer competição <span aria-hidden="true">↗</span></a></article>
+</div>
+</div>
+</section>
+<!-- Seção inteira clicável para futura página -->
+<section aria-label="Estudantes premiados" class="awards" id="premiados">
+<a class="awards-link" data-pending-page="Premiados" href="premiados.html">
+<div class="container awards-layout">
+<span aria-hidden="true" class="awards-icon">✦</span>
+<div><p class="eyebrow">CONQUISTAS QUE INSPIRAM</p><h2>Premiados</h2><p>Medalhas, menções honrosas e histórias de estudantes do IFRO Campus Calama. Um espaço dedicado ao reconhecimento de nossos talentos.</p></div>
+<span aria-hidden="true" class="awards-go">↗</span>
+</div>
+</a>
+</section>
+</main>
+<footer class="footer">
+<div class="container footer-layout">
+<div class="footer-brand">
 
-  <header class="site-header" id="inicio">
-    <div class="container header-main">
-      <a class="brand" href="#inicio" aria-label="Matemática Campus Calama — página inicial">
-        <img src="data:image/webp;base64,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" alt="Matemática Campus Calama" width="420" height="120">
-      </a>
-      <p class="header-tagline">Portal de projetos,<br>competições e conquistas</p>
-      <button class="mobile-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="site-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
-      <div class="container">
-        <ul class="nav-list">
-          <li class="nav-item"><a class="nav-link nav-home" href="#inicio" aria-current="page">Home</a></li>
-          <li class="nav-item has-dropdown">
-            <button class="nav-link nav-trigger" type="button" aria-expanded="false" aria-controls="menu-projetos" data-menu-toggle>Projetos <span class="chevron" aria-hidden="true"></span></button>
-            <div class="dropdown-panel projects-menu" id="menu-projetos">
-              <a class="dropdown-heading" href="#projetos">Conheça todos os projetos <span aria-hidden="true">↗</span></a>
-              <details class="dropdown-group"><summary>Pesquisa</summary><a href="#pesquisa">Em breve</a></details>
-              <details class="dropdown-group"><summary>Ensino</summary><a href="#tom">Treinamento Olímpico em Matemática (TOM)</a><a href="#unemat">Unemat — Matemática para o Enem</a></details>
-              <details class="dropdown-group"><summary>Extensão</summary><a href="#mostra">Mostra de Matemática (Dia Nacional da Matemática)</a></details>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <button class="nav-link nav-trigger" type="button" aria-expanded="false" aria-controls="menu-competicoes" data-menu-toggle>Competições <span class="chevron" aria-hidden="true"></span></button>
-            <div class="dropdown-panel competitions-menu" id="menu-competicoes">
-              <a class="dropdown-heading" href="#competicoes">Todas as competições <span aria-hidden="true">↗</span></a>
-              <a href="#canguru">Concurso Canguru de Matemática Brasil</a>
-              <a href="#omif">Olimpíada de Matemática das Instituições Federais (OMIF)</a>
-              <a href="#jacob">Competição Jacob Palis Júnior</a>
-              <a href="#elon">Competição Elon Lages Lima (Universitário)</a>
-              <a href="#obmep">Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP)</a>
-              <a href="#msf">Matemática Sem Fronteiras (por equipes)</a>
-              <a href="#desafio">Desafio de Matemática Calama</a>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="#premiados">Premiados</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <main id="conteudo">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="container hero-inner">
-        <div class="hero-copy">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> MATEMÁTICA NO IFRO CALAMA</div>
-          <h1 id="hero-title">Onde o talento encontra <em>novos desafios.</em></h1>
-          <p>Um espaço para acompanhar projetos, competições matemáticas, calendários e conquistas dos nossos estudantes.</p>
-          <div class="hero-actions">
-            <a href="#competicoes" class="btn btn-primary">Explorar competições <span aria-hidden="true">↗</span></a>
-            <a href="#calendario" class="btn btn-outline">Ver calendário</a>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="math-halo"></div>
-          <span class="math-symbol sym-sigma">∑</span>
-          <span class="math-symbol sym-integral">∫</span>
-          <span class="math-symbol sym-infty">∞</span>
-          <svg class="function-art" viewBox="0 0 430 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M24 212H411M81 243V17" stroke="#a8d8e6" stroke-opacity=".42" stroke-width="1.8"/>
-            <path d="M26 158 C91 157 103 39 173 83 C243 126 240 226 317 166 C363 132 380 132 415 115" stroke="#77dfc7" stroke-width="5" stroke-linecap="round"/>
-            <circle cx="173" cy="83" r="7" fill="#ffd38a"/>
-            <circle cx="317" cy="166" r="7" fill="#ffd38a"/>
-            <path d="M397 203L412 212L397 221M72 31L81 16L90 31" stroke="#a8d8e6" stroke-opacity=".42" stroke-width="1.8"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <div class="container content-layout">
-      <section class="highlights" aria-labelledby="highlights-title">
-        <div class="section-heading">
-          <div><span class="section-kicker">ACOMPANHE</span><h2 id="highlights-title">Em destaque</h2></div>
-          <a class="text-link" href="#competicoes">Ver competições <span aria-hidden="true">→</span></a>
-        </div>
-        <div class="highlight-grid">
-          <article class="highlight-card">
-            <div class="highlight-visual visual-competitions"><span class="visual-glyph">∑</span><span class="visual-outline">01 / 04</span></div>
-            <div class="highlight-body"><span class="pill">COMPETIÇÕES</span><h3>Sete competições, um só portal</h3><p>Conheça as olimpíadas, concursos e desafios matemáticos acompanhados pelo campus.</p><a href="#competicoes" class="card-link">Explorar competições <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="highlight-card">
-            <div class="highlight-visual visual-calendar"><span class="visual-glyph">10</span><span class="visual-outline">NOV / 2026</span></div>
-            <div class="highlight-body"><span class="pill">DESAFIO CALAMA</span><h3>Provas e informações da edição 2026</h3><p>Confira os horários e as salas da prova do Desafio de Matemática Calama.</p><a href="https://desafiomatematicacalama.netlify.app/" target="_blank" rel="noopener noreferrer" class="card-link">Site do Desafio <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="highlight-card">
-            <div class="highlight-visual visual-tom"><span class="visual-glyph">π</span><span class="visual-outline">PROJETO DE ENSINO</span></div>
-            <div class="highlight-body"><span class="pill">PROJETOS</span><h3>Treinamento Olímpico em Matemática</h3><p>O TOM é uma das iniciativas de ensino voltadas ao aprofundamento matemático.</p><a href="#tom" class="card-link">Conhecer o TOM <span aria-hidden="true">↗</span></a></div>
-          </article>
-          <article class="highlight-card">
-            <div class="highlight-visual visual-awards"><span class="visual-glyph">★</span><span class="visual-outline">CONQUISTAS</span></div>
-            <div class="highlight-body"><span class="pill">PREMIADOS</span><h3>Um espaço para reconhecer talentos</h3><p>Em breve, os resultados e as conquistas dos estudantes do Campus Calama.</p><a href="#premiados" class="card-link">Ver seção de premiados <span aria-hidden="true">↗</span></a></div>
-          </article>
-        </div>
-      </section>
-
-      <aside class="calendar" id="calendario" aria-labelledby="calendar-title">
-        <div class="calendar-heading"><span class="section-kicker">AGENDA</span><h2 id="calendar-title">Calendário</h2><p>Próximas datas e comunicados das competições.</p></div>
-        <div class="calendar-list" id="calendar-list" aria-live="polite"></div>
-        <div class="calendar-note"><span class="info-icon" aria-hidden="true">i</span><p>As datas são atualizadas conforme os comunicados oficiais. Confira sempre o regulamento de cada competição.</p></div>
-      </aside>
-    </div>
-
-    <section class="section-block projects-section" id="projetos" aria-labelledby="projects-title">
-      <div class="container">
-        <div class="section-heading wide-heading"><div><span class="section-kicker">FORMAÇÃO E CONHECIMENTO</span><h2 id="projects-title">Projetos</h2><p>Iniciativas de pesquisa, ensino e extensão relacionadas à Matemática.</p></div></div>
-        <div class="projects-grid">
-          <article class="project-card" id="pesquisa"><span class="project-no">01</span><span class="project-icon" aria-hidden="true">⌕</span><span class="pill muted-pill">PESQUISA</span><h3>Pesquisa em Matemática</h3><p>Espaço reservado para a divulgação de projetos e atividades de pesquisa.</p><span class="project-soon">Em breve</span></article>
-          <article class="project-card" id="tom"><span class="project-no">02</span><span class="project-icon" aria-hidden="true">∑</span><span class="pill muted-pill">ENSINO</span><h3>Treinamento Olímpico em Matemática (TOM)</h3><p>Estudos e aprofundamento para desenvolver o raciocínio e preparar estudantes para competições.</p><a href="#competicoes" class="card-link">Ver competições <span aria-hidden="true">↗</span></a></article>
-          <article class="project-card" id="unemat"><span class="project-no">03</span><span class="project-icon" aria-hidden="true">ƒ</span><span class="pill muted-pill">ENSINO</span><h3>Unemat — Matemática para o Enem</h3><p>Espaço para informações sobre a iniciativa e suas atividades.</p><span class="project-soon">Informações em atualização</span></article>
-          <article class="project-card" id="mostra"><span class="project-no">04</span><span class="project-icon" aria-hidden="true">∫</span><span class="pill muted-pill">EXTENSÃO</span><h3>Mostra de Matemática</h3><p>Uma ação de extensão vinculada ao Dia Nacional da Matemática.</p><span class="project-soon">Detalhes em breve</span></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-block competitions-section" id="competicoes" aria-labelledby="competitions-title">
-      <div class="container">
-        <div class="section-heading wide-heading"><div><span class="section-kicker">PARTICIPE E ACOMPANHE</span><h2 id="competitions-title">Competições matemáticas</h2><p>Explore as competições, conheça o público de cada uma e acesse seus canais oficiais.</p></div></div>
-        <div class="competition-tools">
-          <div class="filter-buttons" role="group" aria-label="Filtrar competições">
-            <button class="filter-button active" type="button" data-filter="todas" aria-pressed="true">Todas</button>
-            <button class="filter-button" type="button" data-filter="basica" aria-pressed="false">Educação básica</button>
-            <button class="filter-button" type="button" data-filter="superior" aria-pressed="false">Universitário</button>
-            <button class="filter-button" type="button" data-filter="equipe" aria-pressed="false">Por equipes</button>
-            <button class="filter-button" type="button" data-filter="campus" aria-pressed="false">Do campus</button>
-          </div>
-          <label class="search-box"><span aria-hidden="true">⌕</span><span class="sr-only">Buscar competição</span><input type="search" id="competition-search" placeholder="Buscar competição..." autocomplete="off"></label>
-        </div>
-        <p class="result-count" id="competition-result-count" aria-live="polite">7 competições</p>
-        <div class="competition-grid" id="competition-grid">
-          <article class="competition-card" id="canguru" data-category="basica" data-search="concurso canguru de matematica brasil">
-            <div class="competition-top"><span class="competition-initial">CG</span><span class="competition-category">Educação básica</span></div><h3>Concurso Canguru de Matemática Brasil</h3><p>Problemas que estimulam criatividade, lógica e raciocínio matemático.</p><a href="https://www.cangurudematematicabrasil.com.br/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="omif" data-category="basica" data-search="olimpiada matematica instituicoes federais omif">
-            <div class="competition-top"><span class="competition-initial">OF</span><span class="competition-category">Instituições federais</span></div><h3>Olimpíada de Matemática das Instituições Federais (OMIF)</h3><p>Competição que incentiva a Matemática na Rede Federal.</p><a href="https://omif.com.br/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="jacob" data-category="basica" data-search="competicao jacob palis junior">
-            <div class="competition-top"><span class="competition-initial">JP</span><span class="competition-category">Educação básica</span></div><h3>Competição Jacob Palis Júnior</h3><p>Desafios matemáticos para estudantes do Ensino Fundamental e Médio.</p><a href="https://www.obm.org.br/competicao-jacob-palis-junior-de-matematica/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="elon" data-category="superior" data-search="competicao elon lages lima universitario">
-            <div class="competition-top"><span class="competition-initial">EL</span><span class="competition-category">Universitário</span></div><h3>Competição Elon Lages Lima</h3><p>Competição matemática de nível universitário.</p><a href="https://www.obm.org.br/competicao-elon-lages-lima-de-matematica/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="obmep" data-category="basica" data-search="olimpiada brasileira matematica escolas publicas obmep">
-            <div class="competition-top"><span class="competition-initial">OB</span><span class="competition-category">Educação básica</span></div><h3>Olimpíada Brasileira de Matemática das Escolas Públicas (OBMEP)</h3><p>Uma das principais olimpíadas de Matemática do país.</p><a href="https://www.obmep.org.br/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="msf" data-category="equipe" data-search="matematica sem fronteiras equipes grupo">
-            <div class="competition-top"><span class="competition-initial">MS</span><span class="competition-category">Por equipes</span></div><h3>Matemática Sem Fronteiras</h3><p>Resolução coletiva de problemas e colaboração entre estudantes.</p><a href="https://matematicasemfronteiras.org/" target="_blank" rel="noopener noreferrer">Site oficial <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="competition-card" id="desafio" data-category="campus" data-search="desafio matematica calama">
-            <div class="competition-top"><span class="competition-initial">DC</span><span class="competition-category">Do campus</span></div><h3>Desafio de Matemática Calama</h3><p>Competição de Matemática realizada no IFRO Campus Porto Velho Calama.</p><a href="https://desafiomatematicacalama.netlify.app/" target="_blank" rel="noopener noreferrer">Site do evento <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-        <div class="empty-results" id="empty-results" hidden>Nenhuma competição encontrada. Tente outro termo ou filtro.</div>
-      </div>
-    </section>
-
-    <section class="section-block awarded-section" id="premiados" aria-labelledby="awarded-title">
-      <div class="container awarded-inner">
-        <div class="awarded-icon" aria-hidden="true">★</div>
-        <div class="awarded-copy"><span class="section-kicker">RECONHECIMENTO</span><h2 id="awarded-title">Premiados</h2><p>Este espaço reunirá as conquistas dos estudantes do IFRO Campus Porto Velho Calama nas competições matemáticas: medalhas, menções honrosas e outras premiações.</p><p class="awarded-note">Seção em preparação. Os nomes e resultados serão publicados após confirmação.</p></div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer"><div class="container footer-inner"><div><strong>MATEMÁTICA</strong><span>Campus Calama</span><p>Projetos, competições e conquistas da comunidade acadêmica.</p></div><div class="footer-right"><span>IFRO • Campus Porto Velho Calama</span><a href="#inicio">Voltar ao topo ↑</a></div></div><div class="container footer-bottom">Portal informativo. Consulte os organizadores para documentos e calendários oficiais.</div></footer>
-
-  <script>
-    // Todo o JavaScript está neste arquivo, como solicitado.
-    const mobileToggle = document.querySelector('.mobile-toggle');
-    const nav = document.getElementById('site-nav');
-    const dropdownButtons = [...document.querySelectorAll('[data-menu-toggle]')];
-
-    function closeDropdowns(except = null) {
-      dropdownButtons.forEach(button => {
+<img alt="Matemática Campus Calama" height="458" src="imagens/logo-matematica-calama.webp" width="1600"/>
+<p>Portal de projetos, competições e conquistas em Matemática do IFRO Campus Porto Velho Calama.</p>
+</div>
+<div class="footer-col">
+<h2>Navegação</h2>
+<a href="index.html">Home</a>
+<a href="#destaques">Destaques</a>
+<a href="#projetos">Projetos</a>
+<a href="#competicoes">Competições</a>
+<a data-pending-page="Premiados" href="premiados.html">Premiados</a>
+</div>
+<div class="footer-col">
+<h2>Projetos</h2>
+<a data-pending-page="Pesquisa em Matemática" href="pesquisa.html">Pesquisa em Matemática</a>
+<a href="tom.html">Treinamento Olímpico (TOM)</a>
+<a data-pending-page="Enemat — Matemática para o Enem" href="enemat-matematica-enem.html">Enemat — Matemática para o Enem</a>
+<a data-pending-page="Mostra de Matemática" href="mostra-matematica.html">Mostra de Matemática</a>
+</div>
+<div class="footer-col footer-competitions">
+<h2>Competições</h2>
+<a data-pending-page="Concurso Canguru de Matemática Brasil" href="canguru.html">Canguru Matemática Brasil</a>
+<a data-pending-page="Olimpíada de Matemática das Instituições Federais (OMIF)" href="omif.html">OMIF</a>
+<a data-pending-page="Competição Jacob Palis Júnior" href="jacob-palis-junior.html">Jacob Palis Júnior</a>
+<a data-pending-page="Olimpíada Mandacaru de Matemática" href="olimpiada-mandacaru.html">Olimpíada Mandacaru de Matemática</a>
+<a data-pending-page="OBMEP" href="obmep.html">OBMEP</a>
+<a data-pending-page="Matemática Sem Fronteiras" href="matematica-sem-fronteiras.html">Matemática Sem Fronteiras</a>
+<a data-alt-url="https://desafiomatematicacalama.netlify.app/" data-pending-page="Desafio de Matemática Calama" href="desafio-calama.html">Desafio de Matemática Calama</a>
+</div>
+</div>
+<div class="container footer-bottom">
+<span>© <span id="copyright-year">2026</span> Matemática Campus Calama. Todos os direitos reservados.</span>
+<span>Instituto Federal de Rondônia · Campus Porto Velho Calama</span>
+</div>
+</footer>
+<!-- Para páginas ainda não criadas: mantém os links planejados sem apresentar erro 404. -->
+<dialog aria-labelledby="pending-title" class="pending-dialog" id="pending-dialog">
+<button aria-label="Fechar aviso" class="dialog-close" data-close-dialog="" type="button">×</button>
+<div aria-hidden="true" class="dialog-symbol">∑</div>
+<p class="eyebrow">MATEMÁTICA CAMPUS CALAMA</p>
+<h2 id="pending-title">Página em preparação</h2>
+<p>Estamos preparando a página <strong id="pending-name"></strong> para reunir informações, orientações e links úteis.</p>
+<div class="dialog-actions"><a class="button button-navy" hidden="" href="#" id="pending-alt" rel="noopener noreferrer" target="_blank">Visitar site do evento ↗</a><button class="button button-light" data-close-dialog="" type="button">Voltar à página</button></div>
+</dialog>
+<script>
+    // Menus: navegação responsiva, acessível por teclado e clique.
+    const menuButton = document.querySelector('.mobile-toggle');
+    const siteNav = document.querySelector('.site-nav');
+    const submenuButtons = [...document.querySelectorAll('[data-menu-toggle]')];
+    function closeSubmenus(except = null) {
+      submenuButtons.forEach(button => {
         if (button !== except) {
           button.setAttribute('aria-expanded', 'false');
           button.closest('.has-dropdown').classList.remove('is-open');
         }
       });
     }
-
-    mobileToggle.addEventListener('click', () => {
-      const willOpen = mobileToggle.getAttribute('aria-expanded') !== 'true';
-      mobileToggle.setAttribute('aria-expanded', String(willOpen));
-      mobileToggle.setAttribute('aria-label', willOpen ? 'Fechar menu' : 'Abrir menu');
-      nav.classList.toggle('nav-open', willOpen);
-      if (!willOpen) closeDropdowns();
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') !== 'true';
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+      siteNav.classList.toggle('nav-open', open);
+      if (!open) closeSubmenus();
     });
-
-    dropdownButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const open = button.getAttribute('aria-expanded') === 'true';
-        closeDropdowns(button);
-        button.setAttribute('aria-expanded', String(!open));
-        button.closest('.has-dropdown').classList.toggle('is-open', !open);
-      });
-    });
-
+    submenuButtons.forEach(button => button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') === 'true';
+      closeSubmenus(button);
+      button.setAttribute('aria-expanded', String(!open));
+      button.closest('.has-dropdown').classList.toggle('is-open', !open);
+    }));
     document.addEventListener('click', event => {
-      if (!event.target.closest('.site-nav')) closeDropdowns();
+      if (!event.target.closest('.site-nav')) closeSubmenus();
     });
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape') {
-        closeDropdowns();
-        if (nav.classList.contains('nav-open')) mobileToggle.click();
+        closeSubmenus();
+        if (siteNav.classList.contains('nav-open')) menuButton.click();
       }
     });
-    nav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        closeDropdowns();
-        if (nav.classList.contains('nav-open')) mobileToggle.click();
-      });
-    });
+    siteNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      closeSubmenus();
+      if (siteNav.classList.contains('nav-open')) menuButton.click();
+    }));
 
-    // Altere ou acrescente eventos nesta lista ao atualizar o calendário.
-    // Não são inseridas datas não confirmadas.
+    // Calendário editável: preencha o dia em data (AAAA-MM-DD) quando divulgado.
+    // Até lá, informe ano e mês (AAAA-MM) sem exibir etiquetas provisórias.
     const eventos = [
-      { dia: '10', mes: 'NOV', ano: '2026', titulo: 'Desafio de Matemática Calama', detalhe: 'Provas: 8h (sala 17), 14h30 (sala 10) e 19h (sala 03).', categoria: 'Evento do campus', url: 'https://desafiomatematicacalama.netlify.app/', data: '2026-11-10' },
-      { dia: '15', mes: 'DEZ', ano: '2026', titulo: 'OBMEP 2026', detalhe: 'Divulgação dos premiados no site oficial.', categoria: 'Resultado nacional', url: 'https://www.obmep.org.br/', data: '2026-12-15' }
-    ];
-
-    const calendarList = document.getElementById('calendar-list');
-    const hoje = new Date(); hoje.setHours(0, 0, 0, 0);
-    const futuros = eventos.filter(e => new Date(`${e.data}T00:00:00`) >= hoje).sort((a,b) => a.data.localeCompare(b.data));
-    const mostrados = futuros.length ? futuros : eventos.slice().sort((a,b) => b.data.localeCompare(a.data));
-    calendarList.innerHTML = mostrados.map(evento => `
-      <article class="calendar-event">
-        <div class="calendar-date"><span>${evento.mes}</span><strong>${evento.dia}</strong><small>${evento.ano}</small></div>
-        <div class="calendar-info"><span class="calendar-type">${evento.categoria}</span><h3><a href="${evento.url}" target="_blank" rel="noopener noreferrer">${evento.titulo} <span aria-hidden="true">↗</span></a></h3><p>${evento.detalhe}</p></div>
-      </article>`).join('');
-    if (!futuros.length) {
-      calendarList.insertAdjacentHTML('afterbegin', '<p class="calendar-past-label">Sem novas datas confirmadas. Últimos registros:</p>');
-    }
-    calendarList.insertAdjacentHTML('beforeend', '<div class="calendar-pending"><strong>Outras competições</strong><p>Novas datas serão incluídas após divulgação dos calendários oficiais.</p></div>');
-
-    const filters = [...document.querySelectorAll('[data-filter]')];
-    const searchInput = document.getElementById('competition-search');
-    const competitionCards = [...document.querySelectorAll('.competition-card')];
-    let selectedFilter = 'todas';
-    const normalize = text => text.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    function applyCompetitionFilters() {
-      const query = normalize(searchInput.value.trim());
-      let visible = 0;
-      competitionCards.forEach(card => {
-        const matchFilter = selectedFilter === 'todas' || card.dataset.category === selectedFilter;
-        const matchText = normalize(card.textContent + ' ' + card.dataset.search).includes(query);
-        const show = matchFilter && matchText;
-        card.hidden = !show;
-        if (show) visible++;
-      });
-      document.getElementById('competition-result-count').textContent = `${visible} ${visible === 1 ? 'competição' : 'competições'}`;
-      document.getElementById('empty-results').hidden = visible !== 0;
-    }
-    filters.forEach(button => button.addEventListener('click', () => {
-      selectedFilter = button.dataset.filter;
-      filters.forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); });
-      applyCompetitionFilters();
-    }));
-    searchInput.addEventListener('input', applyCompetitionFilters);
-
-    // Ao abrir um link do menu para uma competição oculta por filtros, mostre-a.
-    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', () => {
-      const id = a.getAttribute('href').slice(1);
-      const target = document.getElementById(id);
-      if (target?.classList.contains('competition-card') && target.hidden) {
-        selectedFilter = 'todas'; searchInput.value = '';
-        filters.forEach(b => { const active = b.dataset.filter === 'todas'; b.classList.toggle('active',active); b.setAttribute('aria-pressed',String(active)); });
-        applyCompetitionFilters();
+      {
+        data: '2026-11-10', mesApenas: false,
+        nome: 'Desafio de Matemática Calama 2026',
+        detalhe: 'Terça-feira · Matutino 8h · Vespertino 14h30 · Noturno 19h',
+        url: 'https://desafiomatematicacalama.netlify.app/'
+      },
+      
+      {
+        data: '2027-03', mesApenas: true,
+        nome: 'Concurso Canguru de Matemática Brasil 2027',
+        url: 'canguru.html', paginaPendente: 'Canguru de Matemática'
+      },
+      {
+        data: '2027-06', mesApenas: true,
+        nome: 'OBMEP 2027',
+        url: 'obmep.html', paginaPendente: 'OBMEP'
       }
-    }));
+    ];
+    const meses = ['JAN','FEV','MAR','ABR','MAI','JUN','JUL','AGO','SET','OUT','NOV','DEZ'];
+    const calendar = document.getElementById('calendar-events');
+    // Exibe a programação informada, incluindo registros de eventos anteriores.
+    eventos.sort((a,b) => a.data.localeCompare(b.data)).forEach(evento => {
+      const [ano,mes,dia] = evento.data.split('-');
+      const item = document.createElement('article'); item.className = 'calendar-event';
+      const when = document.createElement('div'); when.className = 'calendar-date';
+      if (evento.mesApenas) {
+        when.classList.add('calendar-date-month');
+        when.innerHTML = `<strong>${meses[Number(mes)-1]}</strong><small>${ano}</small>`;
+      } else {
+        when.innerHTML = `<span>${meses[Number(mes)-1]}</span><strong>${Number(dia)}</strong><small>${ano}</small>`;
+      }
+      const info = document.createElement('div'); info.className = 'calendar-info';
+      const titulo = document.createElement('h3');
+      const link = document.createElement('a');
+      link.href = evento.url; link.textContent = evento.nome + ' ↗';
+      if (evento.paginaPendente) link.dataset.pendingPage = evento.paginaPendente;
+      else { link.target = '_blank'; link.rel = 'noopener noreferrer'; }
+      titulo.append(link);
+      info.append(titulo);
+      if (evento.detalhe) {
+        const detalhe = document.createElement('p');
+        detalhe.textContent = evento.detalhe;
+        info.append(detalhe);
+      }
+      item.append(when,info); calendar.append(item);
+    });
+
+    // Links das páginas ainda em desenvolvimento: não levam a um erro 404.
+    // Ao criar uma página, basta remover data-pending-page de seus links.
+    const dialog = document.getElementById('pending-dialog');
+    const dialogName = document.getElementById('pending-name');
+    const altLink = document.getElementById('pending-alt');
+    document.querySelectorAll('[data-pending-page]').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        dialogName.textContent = link.dataset.pendingPage;
+        const alt = link.dataset.altUrl;
+        altLink.hidden = !alt;
+        if (alt) altLink.href = alt;
+        if (typeof dialog.showModal === 'function') dialog.showModal();
+        else dialog.setAttribute('open','');
+      });
+    });
+    document.querySelectorAll('[data-close-dialog]').forEach(b => b.addEventListener('click', () => dialog.close()));
+    dialog.addEventListener('click', e => { if (e.target === dialog) dialog.close(); });
+    document.getElementById('copyright-year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Movimento vetorial da cicloide: roda + ponto gerador + curva (sem mover textos). -->
+  <script>
+  (() => {
+    const section = document.querySelector('.banner-matematica');
+    const svg = section && section.querySelector('#svg-cicloide');
+    if (!svg) return;
+    const element = id => svg.querySelector('#' + id);
+    const base = element('cicloide-base');
+    const guia = element('cicloide-guia');
+    const rastro = element('cicloide-rastro');
+    const roda = element('cicloide-roda');
+    const raio = element('cicloide-raio');
+    const eixo = element('cicloide-eixo');
+    const ponto = element('cicloide-ponto');
+    const botao = section.querySelector('.cicloide-controle');
+    let width = 0, height = 0, radius = 0, baseline = 0, xStart = 0, maxTheta = 0;
+    let elapsed = 0, lastFrame = performance.now(), running = true;
+    let cycleMs = 36000;
+
+    function position(t) {
+      // True cycloid, traced by a point on a circle rolling without slipping.
+      return [xStart + radius * (t - Math.sin(t)), baseline - radius * (1 - Math.cos(t))];
+    }
+    function pathUntil(t) {
+      const segments = Math.max(1, Math.ceil(t / 0.065));
+      let d = '';
+      for (let i = 0; i <= segments; i++) {
+        const xy = position(t * i / segments);
+        d += (i === 0 ? 'M' : 'L') + xy[0].toFixed(2) + ' ' + xy[1].toFixed(2) + ' ';
+      }
+      return d;
+    }
+    function recalculate() {
+      const rect = svg.getBoundingClientRect();
+      if (rect.width <= 0 || rect.height <= 0) return;
+      width = rect.width;
+      height = rect.height;
+      svg.setAttribute('viewBox', `0 0 ${width} ${height}`);
+      radius = Math.min(Math.max(width / 34, 22), 46, (height - 26) / 2);
+      baseline = height - 13;
+      xStart = radius + 7;
+      maxTheta = Math.max(0, (width - xStart - radius - 7) / radius);
+      // Slow rolling: about 41 CSS pixels per second, regardless of screen size.
+      cycleMs = Math.max(16000, width / 41 * 1000);
+      base.setAttribute('x1', '1');
+      base.setAttribute('y1', baseline);
+      base.setAttribute('x2', width - 1);
+      base.setAttribute('y2', baseline);
+      guia.setAttribute('d', pathUntil(maxTheta));
+      roda.setAttribute('r', radius);
+      eixo.setAttribute('r', 2.4);
+      ponto.setAttribute('r', 3.5);
+    }
+    function render(t) {
+      const cx = xStart + radius * t;
+      const cy = baseline - radius;
+      const [px, py] = position(t);
+      roda.setAttribute('cx', cx);
+      roda.setAttribute('cy', cy);
+      eixo.setAttribute('cx', cx);
+      eixo.setAttribute('cy', cy);
+      raio.setAttribute('x1', cx);
+      raio.setAttribute('y1', cy);
+      raio.setAttribute('x2', px);
+      raio.setAttribute('y2', py);
+      ponto.setAttribute('cx', px);
+      ponto.setAttribute('cy', py);
+      rastro.setAttribute('d', pathUntil(t));
+    }
+    function frame(now) {
+      const dt = Math.max(0, Math.min(90, now - lastFrame));
+      lastFrame = now;
+      if (running && !document.hidden) elapsed += dt;
+      if (!width) recalculate();
+      if (width) {
+        const phase = (elapsed % (cycleMs + 900)) / cycleMs;
+        render(maxTheta * Math.min(1, phase));
+      }
+      requestAnimationFrame(frame);
+    }
+    botao.addEventListener('click', () => {
+      running = !running;
+      botao.setAttribute('aria-pressed', String(!running));
+      botao.setAttribute('aria-label', running ? 'Pausar animação da cicloide' : 'Reproduzir animação da cicloide');
+      botao.title = running ? 'Pausar animação' : 'Reproduzir animação';
+      botao.querySelector('span').textContent = running ? 'Ⅱ' : '▶';
+    });
+    window.addEventListener('resize', () => {
+      recalculate();
+      elapsed = 0;
+      lastFrame = performance.now();
+    }, { passive: true });
+    recalculate();
+    requestAnimationFrame(frame);
+  })();
   </script>
 </body>
 </html>

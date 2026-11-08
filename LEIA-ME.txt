@@ -1,0 +1,24 @@
+MATEMÁTICA CAMPUS CALAMA — HOME V6
+
+Arquivos principais:
+  index.html  — página inicial, com JavaScript incorporado
+  style.css   — estilos do site
+  noticia.html — página de leitura das quatro notícias dos destaques
+  imagens/ — fotografias, identidade do Desafio e logomarca
+
+COMO INSTALAR
+1. Extraia o ZIP na pasta Matemática Campus Calama_Site.
+2. Mantenha o tom.html que você já tem. Não é necessário substituí-lo.
+3. Deixe index.html, noticia.html e style.css na raiz e a pasta imagens ao lado.
+4. Teste abrindo index.html, e clique nos destaques: cada um abre noticia.html com a matéria correspondente.
+5. Para publicar: git add index.html noticia.html style.css imagens/ ; git commit ; git push.
+
+OBSERVAÇÕES
+- Calendário editável: ajuste as datas diretamente no array `eventos` do `index.html`. Quando houver dia, use AAAA-MM-DD e defina `mesApenas: false`.
+- O conteúdo editorial das notícias não atribui novas conquistas nem informações individuais aos estudantes.
+- Os arquivos de imagem não estão mais incorporados em Base64 ao HTML.
+
+ALTERAÇÕES DA V6
+- Enemat — Matemática para o Enem substitui Unemat em menus, cartões, rodapé e links.
+- Olimpíada Mandacaru de Matemática substitui a Competição Elon Lages Lima em todos os locais.
+- O calendário não exibe as etiquetas “PREVISTO”, “Mês previsto” nem “Data definida”.
