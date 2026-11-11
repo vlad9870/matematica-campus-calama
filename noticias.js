@@ -254,14 +254,20 @@
     for (const paragrafo of (Array.isArray(item.paragrafos) ? item.paragrafos : [])) {
       container.append(elemento('p', '', paragrafo));
     }
+    // Link complementar da notícia: aceita URLs HTTP(S) completas e páginas HTML internas.
     if (item.link && typeof item.link.url === 'string') {
-      const destino = item.link.url;
-      if (/^(https?:\/\/|[a-z0-9_.-]+\.html(?:[?#].*)?)$/i.test(destino)) {
+      const destino = item.link.url.trim();
+      const externo = /^https?:\/\/[^\s]+$/i.test(destino);
+      const interno = /^[a-z0-9_./-]+\.html(?:[?#].*)?$/i.test(destino);
+      if (externo || interno) {
         const p = elemento('p');
         const a = elemento('a', 'story-related-link', item.link.texto || 'Saiba mais ↗');
         a.href = destino;
-        if (/^https?:\/\//i.test(destino)) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
-        p.append(a); container.append(p);
+        if (externo) { a.target = '_blank'; a.rel = 'noopener noreferrer'; }
+        p.append(a);
+        container.append(p);
+      } else {
+        console.warn('Link de notícia não reconhecido:', destino);
       }
     }
   }

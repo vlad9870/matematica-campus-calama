@@ -1,5 +1,28 @@
 {
   "noticias": [
+
+{
+  "slug": "desafio-calama-2026-realizado",
+  "data": "2026-11-10",
+  "tipo": "competicao",
+  "categoria": "COMPETIÇÃO DO CAMPUS",
+  "titulo": "Desafio de Matemática Calama mobiliza estudantes do IFRO",
+  "tituloDestaque": "Desafio de Matemática Calama 2026 reúne estudantes",
+  "resumo": "Competição mobilizou estudantes do Campus Calama e marcou a etapa final das atividades do TOM.",
+  "subtitulo": "Estudantes participaram da competição de Matemática realizada em 10 de novembro.",
+  "imagem": "imagens/desafio-calama-2026-prova.jpeg",
+  "legenda": "Estudantes durante o Desafio de Matemática Calama 2026.",
+  "largo": false,
+  "paragrafos": [
+    "O Instituto Federal de Rondônia (IFRO), Campus Porto Velho Calama, realizou nesta terça-feira (10/11) o Desafio de Matemática Calama 2026. A competição ocorreu conforme o planejado e contou com a participação de estudantes que demonstraram entusiasmo e satisfação com a experiência. A iniciativa integra o projeto de ensino Treinamento Olímpico em Matemática (TOM), marcando a etapa final das atividades desenvolvidas pelo projeto neste ano. Segundo o professor Vlademir Fernandes, “Esta atividade é importante para incentivar os estudantes do Campus ao estudo da Matemática e estimular a superação de desafios”.",
+    "Os gabaritos e as soluções das provas serão divulgados nesta quarta-feira (11/11). A cerimônia de premiação está prevista para o dia 19 de novembro, quando serão reconhecidos os estudantes que se destacaram na competição, encerrando mais uma etapa de incentivo à aprendizagem, ao raciocínio lógico e à valorização da Matemática no Campus Porto Velho Calama.",
+    "Acompanhe os resultados! Acesse o site oficial do Desafio de Matemática Calama para conferir os gabaritos, as soluções das provas, os resultados e todas as informações sobre a premiação."
+  ],
+  "link": {
+  "url": "https://desafiomatematicacalama.netlify.app/",
+  "texto": "Acessar o site oficial do Desafio Calama ↗"
+  }
+},
     {
       "slug": "desafio-2026",
       "data": null,
