@@ -1,6 +1,28 @@
 {
   "noticias": [
 
+
+{
+  "slug": "noite-premiacoes-matematica-2026",
+  "data": "2026-11-17",
+  "tipo": "premiacao",
+  "categoria": "PREMIAÇÃO",
+  "titulo": "IFRO Calama realiza Noite de Premiações em Matemática",
+  "tituloDestaque": "Noite de Premiações em Matemática",
+  "resumo": "Cerimônia celebra as conquistas dos estudantes em olimpíadas e competições matemáticas de 2026.",
+  "subtitulo": "Evento será realizado no dia 19 de novembro, às 19h, no auditório do Campus Calama.",
+  "imagem": "imagens/premiacao.jpg",
+  "legenda": "Registro de uma cerimônia de premiação em Matemática no Campus Porto Velho Calama.",
+  "largo": false,
+  "paragrafos": [
+    "O Instituto Federal de Rondônia (IFRO), Campus Porto Velho Calama, realizará, no próximo dia 19 de novembro, a Noite de Premiações em Matemática. O evento tem como objetivo reconhecer o desempenho e a dedicação dos estudantes que se destacaram na OBMEP, na OMIF, no Concurso Canguru de Matemática Brasil, na Matemática Sem Fronteiras e no Desafio de Matemática Calama ao longo de 2026.",
+    "A cerimônia será um momento especial de celebração das conquistas acadêmicas, de valorização do conhecimento matemático e de incentivo à participação dos estudantes em novas competições.",
+    "Estudantes, familiares, professores e toda a comunidade acadêmica estão convidados a participar da cerimônia, que ocorrerá às 19h, no auditório do IFRO Campus Porto Velho Calama.",
+    "Venha celebrar conosco os talentos e as conquistas de nossos estudantes!"
+  ]
+},
+
+
 {
   "slug": "desafio-calama-2026-realizado",
   "data": "2026-11-10",
